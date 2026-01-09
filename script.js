@@ -6,8 +6,31 @@
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = this.getAttribute('href');
+
+        // Se for o link para o inicio (#hero), vai para o topo absoluto da página
+        if (href === '#hero') {
+            // Fecha o menu mobile se estiver aberto
+            const navMenu = document.querySelector('.nav-menu');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            navMenu.classList.remove('active');
+            menuBtn.classList.remove('active');
+
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            return;
+        }
+
+        const target = document.querySelector(href);
         if (target) {
+            // Fecha o menu mobile se estiver aberto
+            const navMenu = document.querySelector('.nav-menu');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            navMenu.classList.remove('active');
+            menuBtn.classList.remove('active');
+
             target.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
@@ -24,27 +47,62 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.addEventListener('scroll', function () {
     const navbar = document.querySelector('.navbar');
 
-    if (window.scrollY > 100) {
-        // Quando scrollas mais de 100px, a navbar fica mais opaca e com sombra
-        navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.15)';
+    if (window.scrollY > 50) {
+        navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+        navbar.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+        navbar.style.padding = '0.8rem 0';
     } else {
-        // Volta ao estado normal
         navbar.style.backgroundColor = '#fff';
         navbar.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.1)';
+        navbar.style.padding = '1rem 0';
     }
+});
+
+/* ========================================
+   MENU MOBILE
+   ======================================== */
+
+const menuBtn = document.querySelector('.mobile-menu-btn');
+const navMenu = document.querySelector('.nav-menu');
+
+if (menuBtn) {
+    menuBtn.addEventListener('click', () => {
+        menuBtn.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+}
+
+/* ========================================
+   ANIMAÇÕES DE SCROLL (INTERSECTION OBSERVER)
+   ======================================== */
+
+const revealElements = document.querySelectorAll('.reveal');
+
+const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target); // Anima apenas uma vez
+        }
+    });
+}, {
+    root: null,
+    threshold: 0.15, // Dispara quando 15% do elemento está visível
+    rootMargin: "0px 0px -50px 0px"
+});
+
+revealElements.forEach(el => {
+    revealObserver.observe(el);
 });
 
 /* ========================================
    LINK ATIVO NA NAVEGAÇÃO
    ======================================== */
 
-// Marca qual o link de navegação ativo baseado na secção onde estás
 window.addEventListener('scroll', function () {
     let current = '';
     const sections = document.querySelectorAll('section');
 
-    // Verifica qual a secção mais próxima do topo
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         if (scrollY >= sectionTop - 200) {
@@ -52,10 +110,8 @@ window.addEventListener('scroll', function () {
         }
     });
 
-    // Remove a classe 'active' de todos os links
     document.querySelectorAll('.nav-link').forEach(link => {
         link.classList.remove('active');
-        // Adiciona a classe 'active' apenas ao link da secção atual
         if (link.getAttribute('href').slice(1) === current) {
             link.classList.add('active');
         }
