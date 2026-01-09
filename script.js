@@ -117,3 +117,81 @@ window.addEventListener('scroll', function () {
         }
     });
 });
+
+/* ========================================
+   LIGHTBOX (GALERIA)
+   ======================================== */
+
+const lightbox = document.getElementById('lightbox');
+const lightboxImgPlaceholder = document.getElementById('lightbox-img-placeholder');
+const lightboxCaption = document.querySelector('.lightbox-caption');
+const closeLightbox = document.querySelector('.close-lightbox');
+
+// Seleciona todos os placeholders de imagem dentro da galeria
+const galleryItems = document.querySelectorAll('.galeria .img-placeholder');
+
+galleryItems.forEach(item => {
+    // Torna os itens clicáveis
+    item.style.cursor = 'pointer';
+
+    item.addEventListener('click', function () {
+        const content = this.textContent; // Pega o texto do placeholder
+        const style = window.getComputedStyle(this);
+        const background = style.background; // Pega o gradiente de fundo
+
+        // Define o conteúdo e estilo no lightbox
+        lightboxImgPlaceholder.textContent = content;
+        lightboxImgPlaceholder.style.background = background;
+        lightboxImgPlaceholder.style.width = '100%';
+        lightboxImgPlaceholder.style.height = '100%';
+        lightboxImgPlaceholder.style.display = 'flex';
+        lightboxImgPlaceholder.style.alignItems = 'center';
+        lightboxImgPlaceholder.style.justifyContent = 'center';
+
+        lightboxCaption.textContent = content;
+
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Impede scroll do body
+    });
+});
+
+// Fechar Lightbox
+if (closeLightbox) {
+    closeLightbox.addEventListener('click', () => {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = 'auto'; // Restaura scroll
+    });
+}
+
+// Fechar ao clicar fora da imagem
+if (lightbox) {
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    });
+}
+
+/* ========================================
+   BOTÃO VOLTAR AO TOPO
+   ======================================== */
+
+const backToTopBtn = document.getElementById('back-to-top');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        backToTopBtn.classList.add('show');
+    } else {
+        backToTopBtn.classList.remove('show');
+    }
+});
+
+if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
