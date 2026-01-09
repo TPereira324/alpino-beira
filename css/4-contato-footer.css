@@ -1,0 +1,151 @@
+/* ========================================
+   SECÇÃO: CONTACTO / VISTE-NOS
+   ======================================== */
+
+.contato {
+    padding: 4rem 2rem;
+    background-color: #FFFFFF;
+}
+
+.contato-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* LAYOUT: 2 COLUNAS (INFO + MAPA) */
+.contato-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+/* CARD DE INFORMAÇÕES */
+.contato-info-card {
+    background-color: #FFFFFF;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contato-info-titulo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--cor-escuro);
+    margin-bottom: 2rem;
+}
+
+/* ITEM COM ÍCONE + TEXTO */
+.contato-item-flex {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.contato-item-flex:last-of-type {
+    border-bottom: none;
+}
+
+.contato-icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--cor-fundo-card);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.contato-texto h4 {
+    color: var(--cor-escuro);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.contato-texto p {
+    color: var(--cor-texto-cinzento);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.3rem;
+}
+
+.contato-texto p:last-child {
+    margin-bottom: 0;
+}
+
+/* BOTÃO INSTAGRAM */
+.btn-instagram {
+    width: 100%;
+    background: linear-gradient(135deg, #8B3A8B, #E91E63);
+    color: white;
+    padding: 1rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-instagram:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(233, 30, 95, 0.3);
+}
+
+/* MAPA */
+.contato-mapa {
+    height: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
+   FOOTER (RODAPÉ)
+   ======================================== */
+
+.footer {
+    background-color: #1A1F2E;
+    color: #A0A5B0;
+    padding: 3rem 2rem 1rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer-col h4 {
+    color: var(--cor-primaria);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.footer-col p {
+    color: #A0A5B0;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.footer-col span {
+    margin-right: 0.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #7A8590;
+    font-size: 0.9rem;
+}

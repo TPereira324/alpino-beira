@@ -1,0 +1,95 @@
+/* ========================================
+   SECÇÃO: À NOSSA HISTÓRIA
+   ======================================== */
+
+.historia {
+    padding: 4rem 2rem;
+    background-color: #FFFFFF;
+}
+
+.historia-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* LAYOUT: TEXTO + IMAGENS (2 colunas) */
+.historia-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    align-items: start;
+}
+
+/* COLUNA 1: TEXTO */
+.historia-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.texto-cinzento {
+    color: var(--cor-texto-cinzento);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* COLUNA 2: GALERIA 2x2 */
+.historia-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* CARDS COM ÍCONES (3 colunas) */
+.historia-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.feature-card {
+    background-color: var(--cor-fundo-card);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--cor-primaria);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.8rem;
+}
+
+.card-title {
+    color: var(--cor-escuro);
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.card-text {
+    color: var(--cor-texto-cinzento);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}

@@ -1,0 +1,122 @@
+/* ========================================
+   RESPONSIVE DESIGN (Tablet e Mobile)
+   ======================================== */
+
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-menu {
+        gap: 1rem;
+        font-size: 0.85rem;
+    }
+
+    /* Hero */
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    /* História - Muda para 1 coluna */
+    .historia-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* Galeria - Layout para 1 coluna */
+    .galeria-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-grande {
+        height: 300px;
+    }
+
+    .galeria-pequenas {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Contacto - Layout para 1 coluna */
+    .contato-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contato-mapa {
+        height: 400px;
+    }
+
+    /* Footer - 2 colunas */
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    /* Títulos */
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Hero */
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    /* Navbar */
+    .navbar-logo {
+        font-size: 1rem;
+    }
+
+    /* Galeria - 1 coluna */
+    .galeria-grande {
+        height: 200px;
+    }
+
+    .galeria-item {
+        height: 150px;
+    }
+
+    /* Contacto */
+    .contato-mapa {
+        height: 300px;
+    }
+
+    .contato-info-card {
+        padding: 1.5rem;
+    }
+
+    /* Footer - 1 coluna */
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Títulos */
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
+    }
+}
