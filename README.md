@@ -33,4 +33,4 @@ O site é composto pelas seguintes secções:
 Não é necessário servidor nem instalação adicional.
 
 ---
-© 2025 – Pastelaria Alpino
+© 2026 – Pastelaria Alpino
