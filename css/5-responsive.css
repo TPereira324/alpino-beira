@@ -1,7 +1,8 @@
 /* ========================================
-   RESPONSIVE DESIGN (Tablet e Mobile)
+   RESPONSIVE DESIGN
    ======================================== */
 
+/* Mobile Menu Button (Oculto em Desktop) */
 .mobile-menu-btn {
     display: none;
     cursor: pointer;
@@ -16,14 +17,51 @@
     transition: all 0.3s ease;
 }
 
+/* ========================================
+   TABLET LANDSCAPE / PORTÁTEIS PEQUENOS (max-width: 1024px)
+   ======================================== */
+@media (max-width: 1024px) {
+    /* Ajuste de tipografia base */
+    html {
+        font-size: 95%;
+    }
+
+    /* Navbar - Ajuste de padding */
+    .navbar-container {
+        padding: 0 2rem;
+    }
+
+    /* História - Ajuste de grid */
+    .historia-cards {
+        gap: 1.5rem;
+    }
+    
+    .feature-card {
+        padding: 1.5rem;
+    }
+
+    /* Galeria - Ajuste de altura */
+    .galeria-grande {
+        height: 400px;
+    }
+    
+    .galeria-item {
+        height: 180px;
+    }
+}
+
+/* ========================================
+   TABLET PORTRAIT / MOBILE (max-width: 768px)
+   ======================================== */
 @media (max-width: 768px) {
 
-    /* Navbar Mobile */
+    /* --- NAVBAR MOBILE --- */
     .mobile-menu-btn {
         display: flex;
         z-index: 101;
     }
 
+    /* Animação do Botão Hambúrguer */
     .mobile-menu-btn.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
@@ -36,18 +74,19 @@
         transform: translateY(-8px) rotate(-45deg);
     }
 
+    /* Menu Lateral Slide-in */
     .nav-menu {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 70%;
+        width: 80%; /* Mais largo para melhor toque */
         height: 100vh;
         background-color: white;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-        transition: right 0.4s ease;
+        transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
         z-index: 100;
         gap: 2rem;
     }
@@ -61,115 +100,156 @@
         font-weight: 600;
     }
 
-    .navbar-container {
-        /* flex-direction: column; REMOVIDO para manter layout horizontal no mobile */
-        gap: 0;
-    }
-
-    /* Hero */
+    /* --- HERO --- */
     .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 2.8rem;
+        line-height: 1.2;
     }
 
     .hero-buttons {
         flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto 3rem;
         gap: 1rem;
     }
-
+    
     .btn {
-        width: 100%;
+        width: 100%; /* Botões largura total no mobile */
     }
 
-    /* História - Muda para 1 coluna */
+    /* --- HISTÓRIA --- */
+    /* Passa para 1 coluna */
     .historia-content {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
 
-    /* Galeria - Layout para 1 coluna */
+    .historia-texto {
+        order: 1; /* Texto primeiro */
+    }
+
+    .historia-gallery {
+        order: 2; /* Imagens depois */
+    }
+
+    /* Cards de História - 1 coluna */
+    .historia-cards {
+        grid-template-columns: 1fr; 
+        gap: 1.5rem;
+    }
+
+    /* --- GALERIA --- */
     .galeria-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .galeria-grande {
-        height: 300px;
-    }
-
-    .galeria-pequenas {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    /* Contacto - Layout para 1 coluna */
-    .contato-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .contato-mapa {
-        height: 400px;
-    }
-
-    /* Footer - 2 colunas */
-    .footer-container {
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-    }
-
-    /* Títulos */
-    .section-title {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-
-    /* Hero */
-    .hero-title {
-        font-size: 1.8rem;
-    }
-
-    .hero-subtitle {
-        font-size: 0.9rem;
-    }
-
-    /* Navbar */
-    .navbar-logo {
-        font-size: 1rem;
-    }
-
-    /* Galeria - 1 coluna */
-    .galeria-grande {
-        height: 200px;
-    }
-
-    .galeria-item {
-        height: 150px;
-    }
-
-    /* Contacto */
-    .contato-mapa {
-        height: 300px;
-    }
-
-    .contato-info-card {
-        padding: 1.5rem;
-    }
-
-    /* Footer - 1 coluna */
-    .footer-container {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
 
-    /* Títulos */
-    .section-title {
-        font-size: 1.5rem;
+    .galeria-grande {
+        height: 350px;
     }
 
-    .section-subtitle {
-        font-size: 0.95rem;
+    .galeria-pequenas {
+        grid-template-columns: 1fr 1fr; /* Mantém 2 colunas para as pequenas */
+    }
+
+    /* --- CONTACTO --- */
+    .contato-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contato-mapa {
+        height: 350px;
+    }
+
+    /* --- FOOTER --- */
+    .footer-container {
+        grid-template-columns: 1fr; /* 1 coluna */
+        text-align: center;
+        gap: 2.5rem;
+    }
+    
+    .footer-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+}
+
+/* ========================================
+   MOBILE PEQUENO (max-width: 480px)
+   ======================================== */
+@media (max-width: 480px) {
+    
+    /* Títulos e Espaçamentos */
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+    
+    /* Galeria - Tudo 1 coluna */
+    .galeria-pequenas {
+        grid-template-columns: 1fr; 
+        gap: 1rem;
+    }
+    
+    .galeria-grande {
+        height: 250px;
+    }
+    
+    .galeria-item {
+        height: 200px;
+    }
+
+    /* Contacto - Layout mais compacto */
+    .contato-info-card {
+        padding: 1.5rem;
+    }
+    
+    .contato-item-flex {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .contato-icon {
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Ajuste Botão WhatsApp */
+    .whatsapp-btn {
+        width: 50px;
+        height: 50px;
+        bottom: 80px;
+        right: 20px;
+    }
+    
+    .whatsapp-btn svg {
+        width: 28px;
+        height: 28px;
+    }
+    
+    /* Ajuste Botão Voltar ao Topo */
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        bottom: 25px;
+        right: 25px;
+        font-size: 1.2rem;
     }
 }
