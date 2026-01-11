@@ -125,23 +125,54 @@
 
             <div class="galeria-layout">
                 <div class="galeria-grande">
-                    <div class="img-placeholder img-grande">Imagem Principal</div>
+                    <img src="imagens/WhatsApp Image 2026-01-11 at 20.43.22.jpeg" alt="Imagem Principal" class="img-grande">
                 </div>
 
                 <div class="galeria-pequenas">
                     <div class="galeria-item">
-                        <div class="img-placeholder">Imagem 1</div>
+                        <img src="imagens/WhatsApp Image 2026-01-11 at 20.43.23.jpeg" alt="Imagem 1" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
                     </div>
                     <div class="galeria-item">
-                        <div class="img-placeholder">Imagem 2</div>
+                        <img src="imagens/WhatsApp Image 2026-01-11 at 20.43.23 (1).jpeg" alt="Imagem 2" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
                     </div>
                     <div class="galeria-item">
-                        <div class="img-placeholder">Imagem 3</div>
+                        <img src="imagens/WhatsApp Image 2026-01-11 at 20.43.23 (2).jpeg" alt="Imagem 3" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
                     </div>
                     <div class="galeria-item">
-                        <div class="img-placeholder">Imagem 4</div>
+                        <img src="imagens/WhatsApp Image 2026-01-11 at 20.43.23 (3).jpeg" alt="Imagem 4" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
                     </div>
                 </div>
+            </div>
+
+            <!-- Galeria Expandida com Imagens do WhatsApp -->
+            <div class="galeria-expandida" id="galeria-expandida" style="display: none;">
+                <div class="galeria-grid">
+                    <div class="galeria-item">
+                        <img src="imagens/WhatsApp Image 2026-01-11 at 20.43.23 (4).jpeg" alt="WhatsApp Imagem 1" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
+                    </div>
+                    <div class="galeria-item">
+                        <img src="imagens/WhatsApp Image 2026-01-11 at 20.43.23 (5).jpeg" alt="WhatsApp Imagem 2" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
+                    </div>
+                    <div class="galeria-item">
+                        <img src="imagens/WhatsApp Image 2026-01-11 at 20.43.23 (7).jpeg" alt="WhatsApp Imagem 3" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
+                    </div>
+                    <div class="galeria-item">
+                        <img src="imagens/WhatsApp Image 2026-01-11 at 20.44.02.jpeg" alt="WhatsApp Imagem 4" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
+                    </div>
+                    <div class="galeria-item">
+                        <img src="imagens/WhatsApp Image 2026-01-11 at 20.44.02 (1).jpeg" alt="WhatsApp Imagem 5" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
+                    </div>
+                    <div class="galeria-item">
+                        <img src="imagens/WhatsApp Image 2026-01-11 at 20.48.57.jpeg" alt="WhatsApp Imagem 6" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botão Carregar Mais Imagens -->
+            <div class="galeria-actions" style="text-align: center; margin-top: 2rem;">
+                <button id="btn-carregar-mais" class="btn btn-outline">
+                    Ver Mais Imagens
+                </button>
             </div>
         </div>
     </section>
@@ -244,7 +275,9 @@
     <div id="lightbox" class="lightbox">
         <span class="close-lightbox">&times;</span>
         <div class="lightbox-content">
-            <div id="lightbox-img-placeholder" class="img-placeholder"></div>
+            <div id="lightbox-img-container">
+                <img id="lightbox-img" src="" alt="" style="max-width: 90%; max-height: 90%; object-fit: contain; border-radius: 15px;">
+            </div>
             <div class="lightbox-caption"></div>
         </div>
     </div>
