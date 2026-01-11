@@ -83,7 +83,7 @@
         width: 80%;
         /* Mais largo para melhor toque */
         height: 100vh;
-        background: var(--gradiente-primario); /* Fundo colorido consistente com navbar */
+        background: white; /* Fundo branco consistente com navbar */
         flex-direction: column;
         justify-content: center;
         align-items: center;
