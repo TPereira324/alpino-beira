@@ -123,32 +123,25 @@ window.addEventListener('scroll', function () {
    ======================================== */
 
 const lightbox = document.getElementById('lightbox');
-const lightboxImgPlaceholder = document.getElementById('lightbox-img-placeholder');
+const lightboxImg = document.getElementById('lightbox-img');
 const lightboxCaption = document.querySelector('.lightbox-caption');
 const closeLightbox = document.querySelector('.close-lightbox');
 
-// Seleciona todos os placeholders de imagem dentro da galeria
-const galleryItems = document.querySelectorAll('.galeria .img-placeholder');
+// Seleciona todas as imagens da galeria (incluindo expandida)
+const galleryItems = document.querySelectorAll('.galeria img, .galeria-expandida img');
 
 galleryItems.forEach(item => {
     // Torna os itens clicáveis
     item.style.cursor = 'pointer';
 
     item.addEventListener('click', function () {
-        const content = this.textContent; // Pega o texto do placeholder
-        const style = window.getComputedStyle(this);
-        const background = style.background; // Pega o gradiente de fundo
+        const imgSrc = this.src; // Pega o src da imagem
+        const altText = this.alt; // Pega o texto alternativo
 
-        // Define o conteúdo e estilo no lightbox
-        lightboxImgPlaceholder.textContent = content;
-        lightboxImgPlaceholder.style.background = background;
-        lightboxImgPlaceholder.style.width = '100%';
-        lightboxImgPlaceholder.style.height = '100%';
-        lightboxImgPlaceholder.style.display = 'flex';
-        lightboxImgPlaceholder.style.alignItems = 'center';
-        lightboxImgPlaceholder.style.justifyContent = 'center';
-
-        lightboxCaption.textContent = content;
+        // Define a imagem e legenda no lightbox
+        lightboxImg.src = imgSrc;
+        lightboxImg.alt = altText;
+        lightboxCaption.textContent = altText;
 
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden'; // Impede scroll do body
@@ -193,5 +186,44 @@ if (backToTopBtn) {
             top: 0,
             behavior: 'smooth'
         });
+    });
+}
+
+// Botão Carregar Mais Imagens (WhatsApp)
+const btnCarregarMais = document.getElementById('btn-carregar-mais');
+const galeriaExpandida = document.getElementById('galeria-expandida');
+
+if (btnCarregarMais && galeriaExpandida) {
+    btnCarregarMais.addEventListener('click', function () {
+        if (galeriaExpandida.style.display === 'none') {
+            galeriaExpandida.style.display = 'block';
+            this.textContent = 'Ver Menos Imagens';
+
+            // Adicionar animação suave
+            galeriaExpandida.style.opacity = '0';
+            galeriaExpandida.style.transform = 'translateY(20px)';
+            galeriaExpandida.style.transition = 'all 0.5s ease';
+
+            setTimeout(() => {
+                galeriaExpandida.style.opacity = '1';
+                galeriaExpandida.style.transform = 'translateY(0)';
+            }, 50);
+
+            // Scroll suave para a galeria expandida
+            setTimeout(() => {
+                galeriaExpandida.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }, 100);
+        } else {
+            galeriaExpandida.style.opacity = '0';
+            galeriaExpandida.style.transform = 'translateY(20px)';
+
+            setTimeout(() => {
+                galeriaExpandida.style.display = 'none';
+                this.textContent = 'Ver Mais Imagens';
+            }, 500);
+        }
     });
 }

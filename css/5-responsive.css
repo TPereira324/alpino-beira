@@ -21,6 +21,7 @@
    TABLET LANDSCAPE / PORTÁTEIS PEQUENOS (max-width: 1024px)
    ======================================== */
 @media (max-width: 1024px) {
+
     /* Ajuste de tipografia base */
     html {
         font-size: 95%;
@@ -35,7 +36,7 @@
     .historia-cards {
         gap: 1.5rem;
     }
-    
+
     .feature-card {
         padding: 1.5rem;
     }
@@ -44,7 +45,7 @@
     .galeria-grande {
         height: 400px;
     }
-    
+
     .galeria-item {
         height: 180px;
     }
@@ -79,7 +80,8 @@
         position: fixed;
         top: 0;
         right: -100%;
-        width: 80%; /* Mais largo para melhor toque */
+        width: 80%;
+        /* Mais largo para melhor toque */
         height: 100vh;
         background-color: white;
         flex-direction: column;
@@ -113,9 +115,10 @@
         margin: 0 auto 3rem;
         gap: 1rem;
     }
-    
+
     .btn {
-        width: 100%; /* Botões largura total no mobile */
+        width: 100%;
+        /* Botões largura total no mobile */
     }
 
     /* --- HISTÓRIA --- */
@@ -126,16 +129,18 @@
     }
 
     .historia-texto {
-        order: 1; /* Texto primeiro */
+        order: 1;
+        /* Texto primeiro */
     }
 
     .historia-gallery {
-        order: 2; /* Imagens depois */
+        order: 2;
+        /* Imagens depois */
     }
 
     /* Cards de História - 1 coluna */
     .historia-cards {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
         gap: 1.5rem;
     }
 
@@ -150,7 +155,8 @@
     }
 
     .galeria-pequenas {
-        grid-template-columns: 1fr 1fr; /* Mantém 2 colunas para as pequenas */
+        grid-template-columns: 1fr 1fr;
+        /* Mantém 2 colunas para as pequenas */
     }
 
     /* --- CONTACTO --- */
@@ -165,17 +171,18 @@
 
     /* --- FOOTER --- */
     .footer-container {
-        grid-template-columns: 1fr; /* 1 coluna */
+        grid-template-columns: 1fr;
+        /* 1 coluna */
         text-align: center;
         gap: 2.5rem;
     }
-    
+
     .footer-col {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    
+
     .section-title {
         font-size: 2.2rem;
     }
@@ -185,7 +192,7 @@
    MOBILE PEQUENO (max-width: 480px)
    ======================================== */
 @media (max-width: 480px) {
-    
+
     /* Títulos e Espaçamentos */
     .section-title {
         font-size: 1.8rem;
@@ -200,37 +207,52 @@
         font-size: 1rem;
         padding: 0 1rem;
     }
-    
+
     /* Galeria - Tudo 1 coluna */
     .galeria-pequenas {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
         gap: 1rem;
     }
-    
+
     .galeria-grande {
         height: 250px;
     }
-    
+
     .galeria-item {
         height: 200px;
+    }
+
+    /* Galeria Expandida - Ajustes para mobile */
+    .galeria-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .galeria-expandida {
+        padding: 1rem 0;
+    }
+
+    .btn-outline {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
     }
 
     /* Contacto - Layout mais compacto */
     .contato-info-card {
         padding: 1.5rem;
     }
-    
+
     .contato-item-flex {
         flex-direction: column;
         align-items: center;
         text-align: center;
         gap: 0.5rem;
     }
-    
+
     .contato-icon {
         margin-bottom: 0.5rem;
     }
-    
+
     /* Ajuste Botão WhatsApp */
     .whatsapp-btn {
         width: 50px;
@@ -238,12 +260,12 @@
         bottom: 80px;
         right: 20px;
     }
-    
+
     .whatsapp-btn svg {
         width: 28px;
         height: 28px;
     }
-    
+
     /* Ajuste Botão Voltar ao Topo */
     .back-to-top {
         width: 40px;
