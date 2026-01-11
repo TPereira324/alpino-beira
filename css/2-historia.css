@@ -4,8 +4,8 @@
 
 .historia {
     padding: 4rem 2rem;
-    background: linear-gradient(135deg, #FF1E5F 0%, #f77f88 100%);
-    color: white;
+    background-color: white;
+    color: #333;
 }
 
 .historia-container {
@@ -14,8 +14,7 @@
 }
 
 .historia .section-title {
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: var(--cor-primaria);
 }
 
 /* LAYOUT: TEXTO + IMAGENS (2 colunas) */
@@ -35,7 +34,7 @@
 }
 
 .texto-cinzento {
-    color: #f0f0f0;
+    color: var(--cor-texto-cinzento);
     font-size: 1rem;
     line-height: 1.8;
 }
