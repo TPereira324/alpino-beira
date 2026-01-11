@@ -9,7 +9,8 @@
 }
 
 :root {
-    --cor-primaria: #FF6F61; /* Rosa Coral */
+    --cor-primaria: #FF6F61;
+    /* Rosa Coral */
     --cor-secundaria: #FF8A80;
     --cor-texto-cinzento: #64748b;
     --cor-fundo-card: #f1f5f9;
@@ -36,18 +37,20 @@ body {
     left: 0;
     width: 0%;
     height: 4px;
-    background: var(--cor-primaria); /* Alterado para rosa */
+    background: var(--cor-primaria);
+    /* Alterado para rosa */
     transition: width 0.3s ease;
     z-index: 101;
 }
 
 .navbar {
-    background: var(--cor-branco); /* Alterado para branco */
+    background: #0f172a;
+    /* Alterado para escuro (estilo footer) */
     padding: 1.5rem 0;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adicionada sombra */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-container {
@@ -62,29 +65,32 @@ body {
 .navbar-logo {
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--cor-primaria); /* Alterado para rosa */
-    text-transform: lowercase; /* Estilo "pinóquio" */
+    color: #ffffff;
+    /* Alterado para branco (estilo footer) */
+    text-transform: lowercase;
     letter-spacing: 1px;
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 3rem; /* Espaçamento maior entre itens */
+    gap: 3rem;
 }
 
 .nav-link {
-    color: var(--cor-escuro); /* Alterado para escuro para contraste */
+    color: #94a3b8;
+    /* Alterado para cinza claro (estilo footer) */
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 600;
-    text-transform: uppercase; /* Estilo "SOBRE EMENTA..." */
+    text-transform: uppercase;
     letter-spacing: 1px;
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: var(--cor-primaria); /* Hover rosa */
+    color: #ffffff;
+    /* Hover branco */
     opacity: 1;
 }
 
@@ -93,12 +99,14 @@ body {
    ======================================== */
 
 .hero {
-    background: var(--cor-branco); /* Alterado para branco */
+    background: var(--cor-branco);
+    /* Alterado para branco */
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--cor-escuro); /* Alterado para escuro */
+    color: var(--cor-escuro);
+    /* Alterado para escuro */
     text-align: center;
     position: relative;
 }
@@ -112,7 +120,8 @@ body {
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: var(--cor-primaria); /* Título rosa */
+    color: var(--cor-primaria);
+    /* Título rosa */
     text-shadow: none;
 }
 
@@ -136,7 +145,8 @@ body {
     bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
-    color: var(--cor-primaria); /* Seta rosa */
+    color: var(--cor-primaria);
+    /* Seta rosa */
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 2px;

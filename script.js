@@ -62,7 +62,7 @@ window.addEventListener('scroll', function () {
    BARRA DE PROGRESSO DE SCROLL
    ======================================== */
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const scrollTop = window.pageYOffset;
     const docHeight = document.body.scrollHeight - window.innerHeight;
     const scrollPercent = (scrollTop / docHeight) * 100;
@@ -240,10 +240,10 @@ if (btnCarregarMais && galeriaExpandida) {
             document.querySelectorAll('.lote2, .lote3').forEach(item => {
                 item.style.display = 'none';
             });
-            
+
             galeriaExpandida.style.opacity = '0';
             galeriaExpandida.style.transform = 'translateY(20px)';
-            
+
             setTimeout(() => {
                 galeriaExpandida.style.display = 'none';
                 this.textContent = 'Ver Mais Imagens';
@@ -260,7 +260,7 @@ if (btnCarregarMaisLotes) {
         if (loteAtual < totalLotes) {
             loteAtual++;
             const proximoLote = document.querySelectorAll('.lote' + loteAtual);
-            
+
             // Mostrar o próximo lote com animação
             proximoLote.forEach((item, index) => {
                 setTimeout(() => {
@@ -268,21 +268,21 @@ if (btnCarregarMaisLotes) {
                     item.style.opacity = '0';
                     item.style.transform = 'translateY(20px)';
                     item.style.transition = 'all 0.5s ease';
-                    
+
                     setTimeout(() => {
                         item.style.opacity = '1';
                         item.style.transform = 'translateY(0)';
                     }, 50);
                 }, index * 100);
             });
-            
+
             // Se for o último lote, esconder o botão
             if (loteAtual === totalLotes) {
                 setTimeout(() => {
                     this.style.display = 'none';
                 }, proximoLote.length * 100 + 500);
             }
-            
+
             // Scroll suave para as novas imagens
             setTimeout(() => {
                 proximoLote[0].scrollIntoView({

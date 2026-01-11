@@ -4,7 +4,8 @@
 
 .historia {
     padding: 6rem 2rem;
-    background-color: #f8f9fa; /* Fundo clean cinza claro */
+    background-color: #f8f9fa;
+    /* Fundo clean cinza claro */
     color: var(--cor-escuro);
 }
 
@@ -14,7 +15,8 @@
 }
 
 .historia .section-title {
-    color: var(--cor-primaria); /* Título rosa */
+    color: var(--cor-primaria);
+    /* Título rosa */
     text-shadow: none;
     font-size: 1.5rem;
     text-transform: uppercase;
@@ -27,7 +29,8 @@
     font-size: 2.5rem;
     font-weight: 800;
     line-height: 1.1;
-    color: var(--cor-primaria); /* Título rosa */
+    color: var(--cor-primaria);
+    /* Título rosa */
     text-transform: uppercase;
     margin-bottom: 2rem;
 }
@@ -102,7 +105,8 @@
 }
 
 .card-title {
-    color: var(--cor-primaria); /* Título rosa */
+    color: var(--cor-primaria);
+    /* Título rosa */
     margin-bottom: 0.8rem;
     font-size: 1.1rem;
     font-weight: 700;

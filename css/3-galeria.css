@@ -4,7 +4,8 @@
 
 .galeria {
     padding: 6rem 2rem;
-    background: #1e293b; /* Fundo escuro para contraste */
+    background: #1e293b;
+    /* Fundo escuro para contraste */
     color: white;
 }
 
@@ -14,7 +15,8 @@
 }
 
 .galeria .section-title {
-    color: var(--cor-primaria); /* Título rosa para destaque no fundo escuro */
+    color: var(--cor-primaria);
+    /* Título rosa para destaque no fundo escuro */
     text-shadow: none;
     font-size: 2.5rem;
     font-weight: 800;
@@ -24,7 +26,8 @@
 }
 
 .galeria .section-subtitle {
-    color: #cbd5e1; /* Cinza claro azulado */
+    color: #cbd5e1;
+    /* Cinza claro azulado */
     font-size: 1.1rem;
     margin-bottom: 3rem;
 }
