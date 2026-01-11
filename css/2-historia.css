@@ -4,6 +4,8 @@
 
 .historia {
     padding: 4rem 2rem;
+    background: linear-gradient(135deg, #FF1E5F 0%, #f77f88 100%);
+    color: white;
 }
 
 .historia-container {
@@ -12,12 +14,17 @@
 }
 
 .historia .section-title {
-    color: var(--cor-primaria);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* LAYOUT: TEXTO */
+/* LAYOUT: TEXTO + IMAGENS (2 colunas) */
 .historia-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
     margin-bottom: 4rem;
+    align-items: start;
 }
 
 /* COLUNA 1: TEXTO */
@@ -28,7 +35,7 @@
 }
 
 .texto-cinzento {
-    color: var(--cor-texto-cinzento);
+    color: #f0f0f0;
     font-size: 1rem;
     line-height: 1.8;
 }
