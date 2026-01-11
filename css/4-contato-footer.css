@@ -124,8 +124,10 @@
    ======================================== */
 
 .footer {
-    background: #0f172a; /* Fundo muito escuro para rodapé */
-    color: #94a3b8; /* Texto cinza suave */
+    background: #0f172a;
+    /* Fundo muito escuro para rodapé */
+    color: #94a3b8;
+    /* Texto cinza suave */
     padding: 4rem 2rem 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -140,7 +142,8 @@
 }
 
 .footer-col h4 {
-    color: white; /* Títulos brancos */
+    color: white;
+    /* Títulos brancos */
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
     font-weight: 700;
@@ -152,9 +155,6 @@
     color: #94a3b8;
     margin-bottom: 0.8rem;
     font-size: 0.95rem;
-}
-    font-size: 0.95rem;
-    line-height: 1.8;
 }
 
 .footer-col span {
