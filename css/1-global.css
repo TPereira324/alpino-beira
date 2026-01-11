@@ -9,14 +9,14 @@
 }
 
 :root {
-    --cor-primaria: #3b82f6;
-    --cor-secundaria: #06b6d4;
+    --cor-primaria: #FF1E5F;
+    --cor-secundaria: #f77f88;
     --cor-texto-cinzento: #64748b;
     --cor-fundo-card: #f1f5f9;
     --cor-branco: #ffffff;
     --cor-escuro: #1e293b;
     --cor-cinza-claro: #e2e8f0;
-    --gradiente-primario: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    --gradiente-primario: linear-gradient(135deg, #FF1E5F 0%, #f77f88 100%);
 }
 
 body {
@@ -160,9 +160,9 @@ body {
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, #2563eb 0%, #0891b2 100%);
+    background: linear-gradient(135deg, #d41855 0%, #e94560 100%);
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 10px 20px rgba(255, 30, 95, 0.4);
 }
 
 .btn-secondary {
@@ -354,7 +354,7 @@ body {
 }
 
 .back-to-top:hover {
-    background: linear-gradient(135deg, #2563eb 0%, #0891b2 100%);
+    background: linear-gradient(135deg, #d41855 0%, #e94560 100%);
     transform: translateY(-5px);
 }
 
