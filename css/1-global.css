@@ -9,16 +9,18 @@
 }
 
 :root {
-    --cor-primaria: #FF1E5F;
-    --cor-texto-cinzento: #7A8590;
-    --cor-fundo-card: #F9E9ED;
-    --cor-branco: #FFFFFF;
-    --cor-escuro: #1A1A1A;
-    --cor-cinza-claro: #F5F5F5;
+    --cor-primaria: #3b82f6;
+    --cor-secundaria: #06b6d4;
+    --cor-texto-cinzento: #64748b;
+    --cor-fundo-card: #f1f5f9;
+    --cor-branco: #ffffff;
+    --cor-escuro: #1e293b;
+    --cor-cinza-claro: #e2e8f0;
+    --gradiente-primario: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: var(--cor-branco);
@@ -29,7 +31,9 @@ body {
    ======================================== */
 
 .navbar {
-    background-color: var(--cor-branco);
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 1rem 0;
     position: sticky;
     top: 0;
@@ -140,14 +144,14 @@ body {
 }
 
 .btn-primary {
-    background-color: var(--cor-primaria);
+    background: var(--gradiente-primario);
     color: white;
 }
 
 .btn-primary:hover {
-    background-color: #d41855;
+    background: linear-gradient(135deg, #2563eb 0%, #0891b2 100%);
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(255, 30, 95, 0.4);
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.4);
 }
 
 .btn-secondary {
@@ -323,7 +327,7 @@ body {
     right: 30px;
     width: 50px;
     height: 50px;
-    background-color: var(--cor-primaria);
+    background: var(--gradiente-primario);
     color: white;
     border: none;
     border-radius: 50%;
@@ -339,7 +343,7 @@ body {
 }
 
 .back-to-top:hover {
-    background-color: #d41855;
+    background: linear-gradient(135deg, #2563eb 0%, #0891b2 100%);
     transform: translateY(-5px);
 }
 
