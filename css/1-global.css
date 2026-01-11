@@ -36,20 +36,20 @@ body {
     left: 0;
     width: 0%;
     height: 4px;
-    background: var(--gradiente-primario);
+    background: var(--cor-branco); /* Alterado para branco para contraste */
     transition: width 0.3s ease;
     z-index: 101;
 }
 
 .navbar {
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: var(--cor-primaria);
+    /* Se preferir o gradiente, descomente a linha abaixo */
+    background: var(--gradiente-primario);
     padding: 1.5rem 0;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: none; /* Estilo flat sem sombra */
 }
 
 .navbar-container {
@@ -62,26 +62,32 @@ body {
 }
 
 .navbar-logo {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     font-weight: 700;
-    color: var(--cor-primaria);
+    color: var(--cor-branco);
+    text-transform: lowercase; /* Estilo "pinóquio" */
+    letter-spacing: 1px;
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 3rem; /* Espaçamento maior entre itens */
 }
 
 .nav-link {
-    color: #333;
+    color: var(--cor-branco);
     text-decoration: none;
-    font-size: 0.95rem;
-    transition: color 0.3s ease;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase; /* Estilo "SOBRE EMENTA..." */
+    letter-spacing: 1px;
+    transition: opacity 0.3s ease;
 }
 
 .nav-link:hover {
-    color: var(--cor-primaria);
+    color: var(--cor-branco);
+    opacity: 0.8;
 }
 
 /* ========================================

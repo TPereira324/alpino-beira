@@ -13,7 +13,7 @@
 .bar {
     width: 25px;
     height: 3px;
-    background-color: #333;
+    background-color: #fff; /* Alterado para branco para contraste */
     transition: all 0.3s ease;
 }
 
@@ -83,7 +83,7 @@
         width: 80%;
         /* Mais largo para melhor toque */
         height: 100vh;
-        background-color: white;
+        background: var(--gradiente-primario); /* Fundo colorido consistente com navbar */
         flex-direction: column;
         justify-content: center;
         align-items: center;
