@@ -192,12 +192,17 @@ if (backToTopBtn) {
 // Botão Carregar Mais Imagens (WhatsApp)
 const btnCarregarMais = document.getElementById('btn-carregar-mais');
 const galeriaExpandida = document.getElementById('galeria-expandida');
+const btnCarregarMaisLotes = document.getElementById('btn-carregar-mais-lotes');
+
+let loteAtual = 1;
+const totalLotes = 3;
 
 if (btnCarregarMais && galeriaExpandida) {
     btnCarregarMais.addEventListener('click', function () {
         if (galeriaExpandida.style.display === 'none') {
             galeriaExpandida.style.display = 'block';
             this.textContent = 'Ver Menos Imagens';
+            btnCarregarMaisLotes.style.display = 'inline-block';
 
             // Adicionar animação suave
             galeriaExpandida.style.opacity = '0';
@@ -217,13 +222,60 @@ if (btnCarregarMais && galeriaExpandida) {
                 });
             }, 100);
         } else {
+            // Esconder todos os lotes
+            document.querySelectorAll('.lote2, .lote3').forEach(item => {
+                item.style.display = 'none';
+            });
+            
             galeriaExpandida.style.opacity = '0';
             galeriaExpandida.style.transform = 'translateY(20px)';
-
+            
             setTimeout(() => {
                 galeriaExpandida.style.display = 'none';
                 this.textContent = 'Ver Mais Imagens';
+                btnCarregarMaisLotes.style.display = 'none';
+                loteAtual = 1;
             }, 500);
+        }
+    });
+}
+
+// Botão para carregar mais lotes dentro da galeria expandida
+if (btnCarregarMaisLotes) {
+    btnCarregarMaisLotes.addEventListener('click', function () {
+        if (loteAtual < totalLotes) {
+            loteAtual++;
+            const proximoLote = document.querySelectorAll('.lote' + loteAtual);
+            
+            // Mostrar o próximo lote com animação
+            proximoLote.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.display = 'block';
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(20px)';
+                    item.style.transition = 'all 0.5s ease';
+                    
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, 50);
+                }, index * 100);
+            });
+            
+            // Se for o último lote, esconder o botão
+            if (loteAtual === totalLotes) {
+                setTimeout(() => {
+                    this.style.display = 'none';
+                }, proximoLote.length * 100 + 500);
+            }
+            
+            // Scroll suave para as novas imagens
+            setTimeout(() => {
+                proximoLote[0].scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }, 200);
         }
     });
 }

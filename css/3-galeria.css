@@ -75,9 +75,20 @@
     transform: scale(1.03);
 }
 
-/* ========================================
-   GALERIA EXPANDIDA (WhatsApp)
-   ======================================== */
+/* Estilos para lotes de imagens */
+.galeria-item.lote2,
+.galeria-item.lote3 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.galeria-item.lote2[style*="display: block"],
+.galeria-item.lote3[style*="display: block"] {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 .galeria-expandida {
     margin-top: 2rem;
