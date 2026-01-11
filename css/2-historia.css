@@ -4,8 +4,6 @@
 
 .historia {
     padding: 4rem 2rem;
-    background-color: white;
-    color: #333;
 }
 
 .historia-container {
@@ -17,13 +15,9 @@
     color: var(--cor-primaria);
 }
 
-/* LAYOUT: TEXTO + IMAGENS (2 colunas) */
+/* LAYOUT: TEXTO */
 .historia-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
     margin-bottom: 4rem;
-    align-items: start;
 }
 
 /* COLUNA 1: TEXTO */
