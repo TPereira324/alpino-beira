@@ -4,12 +4,22 @@
 
 .galeria {
     padding: 4rem 2rem;
-    background-color: var(--cor-cinza-claro);
+    background: linear-gradient(135deg, #FF1E5F 0%, #f77f88 100%);
+    color: white;
 }
 
 .galeria-container {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.galeria .section-title {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.galeria .section-subtitle {
+    color: #f0f0f0;
 }
 
 /* LAYOUT: 1 GRANDE + 4 PEQUENAS (2x2) */

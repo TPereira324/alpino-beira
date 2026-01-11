@@ -4,12 +4,22 @@
 
 .contato {
     padding: 4rem 2rem;
-    background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+    background: linear-gradient(135deg, #FF1E5F 0%, #f77f88 100%);
+    color: white;
 }
 
 .contato-container {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.contato .section-title {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contato .section-subtitle {
+    color: #f0f0f0;
 }
 
 /* LAYOUT: 2 COLUNAS (INFO + MAPA) */
@@ -22,12 +32,13 @@
 
 /* CARD DE INFORMAÇÕES */
 .contato-info-card {
-    background-color: var(--cor-branco);
+    background-color: rgba(255, 255, 255, 0.1);
     padding: 2.5rem;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .contato-info-titulo {
@@ -113,7 +124,7 @@
    ======================================== */
 
 .footer {
-    background-color: var(--cor-escuro);
+    background: linear-gradient(135deg, #FF1E5F 0%, #f77f88 100%);
     color: #A0A5B0;
     padding: 3rem 2rem 1rem;
 }
@@ -128,14 +139,14 @@
 }
 
 .footer-col h4 {
-    color: var(--cor-primaria);
+    color: white;
     margin-bottom: 1rem;
     font-size: 1.1rem;
     font-weight: 700;
 }
 
 .footer-col p {
-    color: #A0A5B0;
+    color: #f0f0f0;
     font-size: 0.95rem;
     line-height: 1.8;
 }
@@ -148,6 +159,6 @@
     text-align: center;
     padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: #7A8590;
+    color: #e0e0e0;
     font-size: 0.9rem;
 }
