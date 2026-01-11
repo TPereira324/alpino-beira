@@ -50,11 +50,25 @@ window.addEventListener('scroll', function () {
     if (window.scrollY > 50) {
         navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
         navbar.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
-        navbar.style.padding = '0.8rem 0';
+        navbar.style.padding = '1.3rem 0';
     } else {
-        navbar.style.backgroundColor = '#fff';
+        navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
         navbar.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.1)';
-        navbar.style.padding = '1rem 0';
+        navbar.style.padding = '1.5rem 0';
+    }
+});
+
+/* ========================================
+   BARRA DE PROGRESSO DE SCROLL
+   ======================================== */
+
+window.addEventListener('scroll', function() {
+    const scrollTop = window.pageYOffset;
+    const docHeight = document.body.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    const progressBar = document.querySelector('.scroll-progress');
+    if (progressBar) {
+        progressBar.style.width = scrollPercent + '%';
     }
 });
 
