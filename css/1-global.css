@@ -44,8 +44,7 @@ body {
 }
 
 .navbar {
-    background: #0f172a;
-    /* Alterado para escuro (estilo footer) */
+    background: #0f172a !important; /* Força o fundo escuro mesmo com scroll */
     padding: 1.5rem 0;
     position: sticky;
     top: 0;
