@@ -182,8 +182,10 @@ body {
 
 .btn-secondary {
     background-color: transparent;
-    color: white;
-    border: 2px solid white;
+    color: var(--cor-primaria);
+    /* Alterado para rosa para contraste no fundo branco */
+    border: 2px solid var(--cor-primaria);
+    /* Borda rosa */
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -196,14 +198,16 @@ body {
     left: 0;
     width: 0;
     height: 100%;
-    background-color: white;
+    background-color: var(--cor-primaria);
+    /* Fundo rosa no hover */
     transition: width 0.3s ease;
     z-index: -1;
 }
 
 .btn-secondary:hover {
-    color: var(--cor-primaria);
-    border-color: white;
+    color: white;
+    /* Texto branco no hover */
+    border-color: var(--cor-primaria);
 }
 
 .btn-secondary:hover::before {
