@@ -67,7 +67,8 @@ body {
     font-weight: 700;
     color: #ffffff;
     /* Alterado para branco (estilo footer) */
-    text-transform: lowercase;
+    text-transform: none;
+    /* Mantém o texto original (P maiúsculo) */
     letter-spacing: 1px;
 }
 
@@ -78,8 +79,8 @@ body {
 }
 
 .nav-link {
-    color: #94a3b8;
-    /* Alterado para cinza claro (estilo footer) */
+    color: #ffffff;
+    /* Alterado para branco total */
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 600;
