@@ -65,10 +65,16 @@ body {
     font-size: 1.8rem;
     font-weight: 700;
     color: #ffffff;
-    /* Alterado para branco (estilo footer) */
+
     text-transform: none;
-    /* Mantém o texto original (P maiúsculo) */
+   
     letter-spacing: 1px;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.navbar-logo:hover {
+    color: var(--cor-primaria);
 }
 
 .nav-menu {
@@ -89,8 +95,8 @@ body {
 }
 
 .nav-link:hover {
-    color: #ffffff;
-    /* Hover branco */
+    color: var(--cor-primaria);
+    /* Hover rosa */
     opacity: 1;
 }
 
